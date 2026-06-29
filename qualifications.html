@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1A2E3B">
+<title>Qualifications — Nudge Education Online</title>
+<meta name="description" content="The qualifications at the heart of NEO: Pearson Edexcel International GCSEs in English, Maths, Human Biology and Art &amp; Design, plus RSHE, Relational Intelligence and stepping-stone routes. Live online, ages 11–18.">
+<meta property="og:title" content="Qualifications — Nudge Education Online">
+<meta property="og:description" content="Pearson Edexcel International GCSEs and other routes, taught live online by qualified subject specialists. Ages 11–18.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://courses.nudgeeducation.online/qualifications.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A2E3B; --teal:#2AB3A0; --teal-dark:#1F8A7C; --cream:#F5F1E8; --cream-light:#FAF7F0;
+  --off-white:#F7F7F5; --coral:#E8734A; --charcoal:#2D3436; --grey:#6B7B8D; --line:#E8ECEF;
+  --display:'Fraunces',Georgia,serif; --body:'Inter',Arial,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--charcoal);background:var(--cream-light);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-dark)}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;border-radius:8px;z-index:50}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.25rem}
+
+header.site{background:var(--ink);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0}
+.brand{display:flex;align-items:baseline;gap:.5rem;text-decoration:none;color:#fff}
+.brand .neo{font-family:var(--display);font-weight:600;font-size:1.5rem;letter-spacing:.01em;display:inline-flex;align-items:baseline}
+.brand .sq{display:inline-block;width:.42em;height:.42em;background:var(--teal);margin-left:.12em}
+.brand .by{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#c9d2da}
+nav.main{display:flex;flex-wrap:wrap;gap:.15rem}
+nav.main a{color:#dfe5ea;text-decoration:none;font-size:.86rem;padding:.4rem .6rem;border-radius:6px}
+nav.main a:hover{background:rgba(255,255,255,.1);color:#fff}
+nav.main a[aria-current]{color:#fff;font-weight:600}
+nav.main a.cta{background:var(--teal);color:#04201c;font-weight:600}
+nav.main a.cta:hover{background:#46c4b2}
+
+.hero{background:var(--ink);color:#fff;padding:1rem 0 2.75rem}
+.eyebrow{color:var(--teal);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .6rem}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.08;margin:.1rem 0 .9rem}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero h1 .sqdot{display:inline-block;width:.17em;height:.17em;background:var(--teal);vertical-align:baseline;margin-left:.04em}
+.hero p{max-width:64ch;color:#dde3e8;font-size:1.04rem;margin:.2rem 0 0}
+
+section.band{padding:2.5rem 0}
+section.band.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2.sec{font-family:var(--display);font-weight:600;font-size:1.6rem;color:var(--ink);margin:0 0 .3rem}
+.sec-intro{max-width:70ch;color:var(--charcoal);margin:.2rem 0 1.6rem}
+
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.how div{background:var(--off-white);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem}
+.how h3{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.02rem;margin:0 0 .35rem}
+.how p{margin:0;font-size:.9rem}
+
+.quals{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem;margin-top:1rem}
+.qual{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.15rem 1.15rem 1.25rem}
+.qual.alt{background:var(--cream-light)}
+.qual .code{display:inline-block;align-self:flex-start;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:.22rem .55rem;border-radius:999px;margin-bottom:.6rem}
+.qual.planned .code{background:var(--coral)}
+.qual .plan{position:absolute;top:1.15rem;right:1.15rem;background:var(--coral);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .5rem;border-radius:999px}
+.qual h3{font-family:var(--display);font-weight:600;font-size:1.22rem;line-height:1.2;color:var(--ink);margin:.1rem 0 .5rem;max-width:84%}
+.qual dl{margin:0 0 .7rem;display:grid;grid-template-columns:auto 1fr;gap:.15rem .6rem}
+.qual dt{font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--grey);font-weight:600;padding-top:.12rem}
+.qual dd{margin:0;font-size:.88rem}
+.qual p.study{font-size:.9rem;margin:.1rem 0 .7rem}
+.qual p.why{font-size:.88rem;margin:0;color:var(--teal-dark);border-top:1px solid var(--line);padding-top:.6rem}
+.qual p.why b{color:var(--ink)}
+
+.beyond{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-top:1rem}
+.beyond article{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+.beyond h3{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1.15rem;margin:0 0 .45rem}
+.beyond p{font-size:.9rem;margin:0 0 .6rem}
+.credit{font-size:.78rem;color:var(--grey);font-style:italic;margin:.4rem 0 0}
+
+.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.routes div{background:var(--off-white);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem}
+.routes h3{font-family:var(--display);font-weight:600;color:var(--ink);font-size:1rem;margin:0 0 .3rem}
+.routes p{margin:0;font-size:.88rem}
+
+.asdan{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.1rem;margin-top:1rem}
+.acard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.1rem}
+.acard .type{align-self:flex-start;background:var(--teal);color:#04201c;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .55rem;border-radius:999px;margin-bottom:.55rem}
+.acard.post16 .type{background:var(--ink);color:#fff}
+.acard h3{font-family:var(--display);font-weight:600;font-size:1.12rem;color:var(--ink);margin:.1rem 0 .35rem}
+.acard .m{font-size:.74rem;color:var(--grey);margin:0 0 .55rem;font-weight:600;letter-spacing:.02em}
+.acard p.d{font-size:.88rem;margin:0 0 .7rem;flex:1}
+.acard p.w{font-size:.86rem;margin:0;color:var(--teal-dark);border-top:1px solid var(--line);padding-top:.55rem}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{text-decoration:none;font-weight:600;font-size:.92rem;padding:.65rem 1.05rem;border-radius:10px}
+.btn.primary{background:var(--teal);color:#04201c}
+.btn.primary:hover{background:#46c4b2}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.note{font-size:.82rem;color:var(--grey);margin-top:1rem}
+
+footer.site{background:var(--ink);color:#c9d2da}
+footer.site .wrap{padding:2rem 1.25rem}
+footer .lead{font-family:var(--display);color:#fff;font-size:1.05rem;margin:0 0 .4rem}
+footer .cols{display:flex;flex-wrap:wrap;gap:2rem;margin:1.2rem 0}
+footer a{color:#cfd6dc}
+footer small{display:block;margin-top:1rem;color:#8c97a1;font-size:.8rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="https://nudgeeducation.online/">
+      <span class="neo">NEO<span class="sq"></span></span>
+      <span class="by">by Nudge Education</span>
+    </a>
+    <nav class="main" aria-label="Primary">
+      <a href="https://nudgeeducation.online/">Home</a>
+      <a href="https://curriculum.nudgeeducation.online/">Curriculum</a>
+      <a href="./index.html">Courses &amp; clubs</a>
+      <a href="./qualifications.html" aria-current="page">Qualifications</a>
+      <a href="https://nudgeeducation.online/faq.html">FAQ</a>
+      <a class="cta" href="https://forms.gle/gSecpMw7GJYNNNk6A" target="_blank" rel="noopener">Register interest</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="main">
+  <div class="wrap">
+    <p class="eyebrow">Ages 11–18 · Pearson Edexcel International GCSEs</p>
+    <h1>The qualifications at the heart of <em>NEO</em><span class="sqdot" aria-hidden="true"></span></h1>
+    <p>Real qualifications, taught live online by qualified, subject-specialist teachers, with a named practitioner alongside every learner. We build the offer around young people who have found exams and classrooms hard — so wherever a route can be gentler, we take it.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="sec">How our qualifications work</h2>
+    <p class="sec-intro">Our spine is the Pearson Edexcel International GCSE — a globally recognised qualification taken by learners around the world. The first intakes in September 2026 are a Year 9 and a Year 10 cohort, with learners entered when they are ready rather than all at once.</p>
+    <div class="how">
+      <div><h3>Taught live, by specialists</h3><p>Every course is delivered live online by qualified, subject-specialist teachers — not pre-recorded, and never left to a learner to work through alone.</p></div>
+      <div><h3>Linear, with gentler routes</h3><p>These International GCSEs are assessed at the end of the course. Where a coursework or portfolio route exists — in English and in Art — we use it to take the weight off the exam hall.</p></div>
+      <div><h3>Stepping stones too</h3><p>Functional Skills, ASDAN and a Discovery Phase sit alongside, for learners building back towards formal qualifications.</p></div>
+      <div><h3>Honest about the small print</h3><p>International GCSEs are not regulated by Ofqual. Exam entry fees are charged separately from tuition. We'll always tell you what a route does and doesn't include.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <h2 class="sec">Our International GCSEs</h2>
+    <p class="sec-intro">Six Pearson Edexcel International GCSEs, chosen to give a broad, balanced and achievable set of qualifications. Each is shown with its Pearson specification code.</p>
+    <div class="quals">
+
+      <article class="qual">
+        <span class="code">Pearson Edexcel · 4EA1</span>
+        <h3>English Language A</h3>
+        <dl>
+          <dt>Structure</dt><dd>Linear International GCSE (9–1)</dd>
+          <dt>Assessment</dt><dd>100% examination, or 60% exam + 40% coursework; optional Spoken Language Endorsement</dd>
+          <dt>You study</dt><dd>Reading non-fiction and literary texts; transactional and imaginative writing; a set anthology</dd>
+        </dl>
+        <p class="why"><b>Why it suits NEO:</b> the coursework route lifts much of the exam pressure, and it builds the everyday reading and writing that unlock everything else.</p>
+      </article>
+
+      <article class="qual">
+        <span class="code">Pearson Edexcel · 4ET1</span>
+        <h3>English Literature</h3>
+        <dl>
+          <dt>Structure</dt><dd>Linear International GCSE (9–1)</dd>
+          <dt>Assessment</dt><dd>100% examination, or 60% exam + 40% coursework</dd>
+          <dt>You study</dt><dd>Poetry, modern prose (including contemporary novels such as <em>Klara and the Sun</em>), modern drama and literary heritage texts</dd>
+        </dl>
+        <p class="why"><b>Why it suits NEO:</b> stories are often a way back in, and the coursework route suits learners who freeze in exams but think deeply on the page.</p>
+      </article>
+
+      <article class="qual">
+        <span class="code">Pearson Edexcel · 4MA1</span>
+        <h3>Mathematics A</h3>
+        <dl>
+          <dt>Structure</dt><dd>Linear International GCSE (9–1), Foundation or Higher tier</dd>
+          <dt>Assessment</dt><dd>Two written papers; calculator permitted</dd>
+          <dt>You study</dt><dd>Number, algebra, geometry and statistics, at the tier that fits the learner</dd>
+        </dl>
+        <p class="why"><b>Why it suits NEO:</b> tiered entry means a learner meets maths where they actually are, not where a year group says they should be.</p>
+      </article>
+
+      <article class="qual">
+        <span class="code">Pearson Edexcel · 4HB1</span>
+        <h3>Human Biology</h3>
+        <dl>
+          <dt>Structure</dt><dd>Linear International GCSE (9–1), untiered</dd>
+          <dt>Assessment</dt><dd>Two written examinations</dd>
+          <dt>You study</dt><dd>The human body and how it works — cells and systems, health, disease and inheritance</dd>
+        </dl>
+        <p class="why"><b>Why it suits NEO:</b> a science rooted in the learner's own body — tangible and relevant, and a strong base for health and care pathways.</p>
+      </article>
+
+      <article class="qual planned">
+        <span class="plan">Planned</span>
+        <span class="code">Pearson Edexcel · 4SD0</span>
+        <h3>Science (Double Award)</h3>
+        <dl>
+          <dt>Structure</dt><dd>Linear International GCSE (9–1), untiered — worth two GCSEs</dd>
+          <dt>Assessment</dt><dd>Three written examinations across Biology, Chemistry and Physics</dd>
+          <dt>You study</dt><dd>A full, balanced science across all three disciplines, equivalent to Combined Science</dd>
+        </dl>
+        <p class="why"><b>Planned for a future intake</b> as our science team grows. Human Biology leads our science offer at launch.</p>
+      </article>
+
+      <article class="qual">
+        <span class="code">Pearson Edexcel · 4FA1</span>
+        <h3>Art &amp; Design (Fine Art)</h3>
+        <dl>
+          <dt>Structure</dt><dd>International GCSE (9–1) — portfolio-based, no written exam</dd>
+          <dt>Assessment</dt><dd>A Personal Portfolio, plus an Externally-set Assignment with a 10-hour period of sustained focus</dd>
+          <dt>You study</dt><dd>Drawing, painting, mixed media, print, sculpture and lens-based media</dd>
+        </dl>
+        <p class="why"><b>Why it suits NEO:</b> a full qualification earned through making, with no written exam — ideal for learners who express themselves better through their hands than under exam conditions.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="sec">Beyond the qualifications</h2>
+    <p class="sec-intro">Two strands every learner takes part in, woven through the week alongside subjects — because wellbeing and how we relate to the world matter as much as grades.</p>
+    <div class="beyond">
+      <article>
+        <h3>RSHE — Relationships, Sex and Health Education</h3>
+        <p>Age-appropriate, statutory Relationships, Sex and Health Education, delivered with care for learners who have had difficult experiences. It runs as part of our Friday Cornerstones Day, and elements are offered free to the wider parent and learner community.</p>
+        <p>It isn't a graded qualification — it's part of how NEO keeps young people safe, informed and well.</p>
+      </article>
+      <article>
+        <h3>Relational Intelligence</h3>
+        <p>NEO's own take on staying human in a world of fast-changing technology: understanding intelligence as something deeper than a score — how we see, respond, connect and grow, with people and now with machines. Learners explore emotional grounding online, asking better questions, and engaging ethically with AI. No coding required.</p>
+        <p class="credit">A NEO-branded adaptation of <em>Relating Intelligently</em>, developed by The Novacene (thenovacene.com) and shared under CC BY-NC 4.0.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <h2 class="sec">Other routes</h2>
+    <p class="sec-intro">Not every learner arrives ready for a full GCSE, and that's expected. These routes meet learners where they are and build forward.</p>
+    <div class="routes">
+      <div><h3>Functional Skills</h3><p>Practical, recognised qualifications in English, Maths and Digital Skills — useful in their own right and a confident stepping stone towards GCSE.</p></div>
+      <div><h3>ASDAN</h3><p>Flexible, accredited short courses and programmes that build skills and evidence achievement at a learner's own pace — see our selection below.</p></div>
+      <div><h3>Discovery Phase</h3><p>For learners not yet ready for formal qualifications — a Cornerstones-led re-engagement phase that rebuilds confidence and the habit of learning.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="sec">ASDAN courses for our cohort</h2>
+    <p class="sec-intro">Flexible, portfolio-based courses delivered through our ASDAN centre membership — most at Entry Level 3 to Level 1, accrediting 10–60 hours of activity. They build confidence and real-world skills alongside GCSEs, can be completed at a learner's own pace with guided at-home tasks, and bank credit towards ASDAN's wider Personal Development Programmes.</p>
+    <div class="asdan">
+
+      <article class="acard">
+        <span class="type">Short Course · Entry 3–Level 1</span>
+        <h3>Animal Care</h3>
+        <p class="m">10–60 hours · portfolio-based</p>
+        <p class="d">Caring for animals — from pets at home to farm animals and wildlife — across modules on animal welfare, safety, the law, animals in the media and careers working with animals.</p>
+        <p class="w"><b>Why it fits:</b> gentle, motivating and doable from home with a learner's own pet — animals are a proven route to calm and connection.</p>
+      </article>
+
+      <article class="acard">
+        <span class="type">Short Course · Entry 3–Level 1</span>
+        <h3>Careers &amp; Experiencing Work</h3>
+        <p class="m">10–60 hours · mapped to the Gatsby Benchmarks</p>
+        <p class="d">Self-development, exploring careers, considering apprenticeships and higher education, and planning work experience — across seven structured modules.</p>
+        <p class="w"><b>Why it fits:</b> builds work-readiness and a sense of "what next" at the learner's own pace, with no classroom pressure.</p>
+      </article>
+
+      <article class="acard">
+        <span class="type">Short Course · Fully digital</span>
+        <h3>Esports</h3>
+        <p class="m">10–60 hours · delivered online</p>
+        <p class="d">The world behind competitive gaming — building teams and tournaments, health, wellbeing and safety, branding and media, and the careers in a multi-billion-pound industry.</p>
+        <p class="w"><b>Why it fits:</b> meets many of our learners exactly where their interest already is, and turns screen time into recognised skills.</p>
+      </article>
+
+      <article class="acard">
+        <span class="type">Short Course · Entry 3–Level 1</span>
+        <h3>Gardening</h3>
+        <p class="m">10–60 hours · portfolio-based</p>
+        <p class="d">Practical growing and wellbeing — planting, growing food, wildlife, cooking your own produce, and careers in horticulture — across eight modules.</p>
+        <p class="w"><b>Why it fits:</b> calming and hands-on, naturally suited to guided at-home activity, and a Cornerstones-friendly route to Movement, Nutrition and Reflection.</p>
+      </article>
+
+      <article class="acard">
+        <span class="type">Short Course · Entry 3–Level 1</span>
+        <h3>Personal Finance</h3>
+        <p class="m">Up to 60 hours · portfolio-based</p>
+        <p class="d">Real-world money skills — budgeting, income and spending, planning ahead and making financial choices — across five practical modules.</p>
+        <p class="w"><b>Why it fits:</b> life skills every young person needs, and an accessible, confidence-building way into applied maths.</p>
+      </article>
+
+      <article class="acard">
+        <span class="type">Modular framework · SEND-focused</span>
+        <h3>Towards Independence</h3>
+        <p class="m">80+ modules · mapped to the SEND code of practice</p>
+        <p class="d">A flexible framework recognising small steps in personal, social, work-related and independent-living skills, built up module by module into a record of real achievement.</p>
+        <p class="w"><b>Why it fits:</b> meets learners with complex needs exactly where they are, accrediting progress that other qualifications miss.</p>
+      </article>
+
+      <article class="acard post16">
+        <span class="type">Post-16 · Level 3 · up to 28 UCAS points</span>
+        <h3>Extended Project Qualification (EPQ)</h3>
+        <p class="m">~120 hours incl. a taught element · England &amp; NI</p>
+        <p class="d">An independent research project — a 5,000-word dissertation, or an artefact with a report — built around a topic or work placement the learner chooses.</p>
+        <p class="w"><b>Why it fits:</b> a serious, UCAS-bearing qualification that rewards deep interest and independence — ideal for post-16 learners heading towards university.</p>
+      </article>
+
+    </div>
+    <p class="note">Courses awarded by ASDAN, a registered charity and awarding organisation, delivered under ASDAN centre membership. Availability depends on learner readiness and course suitability.</p>
+  </div>
+</section>
+
+<section class="hero" style="padding:2.5rem 0">
+  <div class="wrap">
+    <h2 class="sec" style="color:#fff">Want to talk it through?</h2>
+    <p style="max-width:62ch;color:#dde3e8;margin:.3rem 0 0">Tell us about your young person and which qualifications might fit, or come to an open event and ask us anything.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://forms.gle/gSecpMw7GJYNNNk6A" target="_blank" rel="noopener">Register your interest</a>
+      <a class="btn ghost" href="https://www.eventbrite.co.uk/o/nudge-education-ltd-115006744051" target="_blank" rel="noopener">Come to an open event</a>
+    </div>
+    <p class="note">Exam entry fees are charged separately from tuition. International GCSEs are globally recognised but are not regulated by Ofqual.</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <p class="lead">Come and have a look.</p>
+    <p>We'd rather show you than tell you. Register your interest, or come to an open event and bring your questions.</p>
+    <div class="cols">
+      <div>
+        <a href="./index.html">Courses &amp; clubs</a><br>
+        <a href="https://curriculum.nudgeeducation.online/">Curriculum</a><br>
+        <a href="https://nudgeeducation.online/faq.html">FAQ</a>
+      </div>
+      <div>
+        <a href="https://policies.nudgeeducation.online/">All policies</a><br>
+        <a href="mailto:neo@nudgeeducation.online">neo@nudgeeducation.online</a><br>
+        <a href="https://nudgeeducation.online/">nudgeeducation.online</a>
+      </div>
+    </div>
+    <small>© 2026 Nudge Education Ltd · Part of Nudge Education · Working towards voluntary Ofsted accreditation as an online school. Qualification specifications © Pearson Education Ltd.</small>
+  </div>
+</footer>
+</body>
+</html>

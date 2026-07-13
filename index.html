@@ -97,23 +97,131 @@ footer small{display:block;margin-top:1rem;color:#8c97a1;font-size:.8rem}
 <body>
 <a class="skip" href="#results">Skip to courses</a>
 
-<header class="site">
-  <div class="wrap bar">
-    <a class="brand" href="https://nudgeeducation.online/">
-      <span class="neo">NEO<span class="sq"></span></span>
-      <span class="by">by Nudge Education</span>
+<!-- neo-shared-nav:start v1 · canonical: nudge-access-website/shared/header.html · edit the canonical, then re-stamp with shared/stamp-nav.py — do not hand-edit copies -->
+<style>
+.nn{background:#1A2E3B;color:#fff;font-family:'Inter',Arial,system-ui,sans-serif;position:relative;z-index:40}
+.nn *{box-sizing:border-box}
+.nn-wrap{max-width:1140px;margin:0 auto;padding:.7rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.nn-brand{display:inline-flex;align-items:baseline;gap:.5rem;text-decoration:none;color:#fff}
+.nn-neo{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.45rem;letter-spacing:.01em;display:inline-flex;align-items:baseline}
+.nn-sq{display:inline-block;width:.42em;height:.42em;background:#2AB3A0;margin-left:.12em}
+.nn-by{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#c9d2da}
+.nn-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:#fff;font:600 .85rem 'Inter',Arial,sans-serif;padding:.45rem .8rem;border-radius:8px;cursor:pointer}
+.nn-menu{display:flex;align-items:center;gap:.1rem;flex-wrap:wrap}
+.nn-menu > a, .nn-group > button{font:500 .87rem 'Inter',Arial,sans-serif;color:#dfe5ea;text-decoration:none;background:none;border:none;padding:.45rem .6rem;border-radius:7px;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
+.nn-menu > a:hover, .nn-group > button:hover{background:rgba(255,255,255,.1);color:#fff}
+.nn-menu a[aria-current="page"], .nn-group.nn-here > button{color:#fff;box-shadow:inset 0 -2px 0 #2AB3A0}
+.nn-caret{font-size:.6rem;opacity:.7}
+.nn-group{position:relative}
+.nn-drop{position:absolute;top:100%;left:0;min-width:15rem;background:#fff;border:1px solid #E8ECEF;border-radius:10px;box-shadow:0 10px 28px rgba(26,46,59,.18);padding:.4rem;display:none;flex-direction:column}
+.nn-group.open > .nn-drop{display:flex}
+@media (hover:hover){.nn-group:hover > .nn-drop{display:flex}}
+.nn-drop a{color:#2D3436;text-decoration:none;font:500 .88rem 'Inter',Arial,sans-serif;padding:.5rem .65rem;border-radius:7px;display:block}
+.nn-drop a:hover{background:#F5F1E8;color:#1A2E3B}
+.nn-drop a[aria-current="page"]{color:#1F8A7C;font-weight:600}
+.nn-cta{background:#2AB3A0;color:#04201c !important;font-weight:600;margin-left:.35rem}
+.nn-cta:hover{background:#46c4b2 !important}
+.nn-subnav{background:#F5F1E8;border-bottom:1px solid #E8ECEF;font-family:'Inter',Arial,sans-serif}
+.nn-subnav .nn-wrap{padding:.4rem 1.25rem;justify-content:flex-start;gap:.9rem}
+.nn-subnav span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#6B7B8D;font-weight:600}
+.nn-subnav a{font-size:.85rem;color:#1F8A7C;text-decoration:none;font-weight:500}
+.nn-subnav a:hover{text-decoration:underline}
+.nn-subnav a[aria-current="page"]{color:#1A2E3B;font-weight:600}
+@media (max-width:880px){
+  .nn-toggle{display:inline-block}
+  .nn-menu{display:none;flex-direction:column;align-items:stretch;width:100%;padding:.5rem 0 .8rem}
+  .nn.nn-open .nn-menu{display:flex}
+  .nn-group > button{width:100%;justify-content:space-between}
+  .nn-drop{position:static;display:flex;background:rgba(255,255,255,.06);border:none;box-shadow:none;margin:.1rem 0 .3rem}
+  .nn-drop a{color:#dfe5ea;padding-left:1.2rem}
+  .nn-drop a:hover{background:rgba(255,255,255,.1);color:#fff}
+  .nn-drop a[aria-current="page"]{color:#2AB3A0}
+  .nn-cta{margin:.4rem .6rem 0;text-align:center}
+}
+</style>
+<header class="nn" id="nn">
+  <div class="nn-wrap">
+    <a class="nn-brand" href="https://nudgeeducation.online/" aria-label="NEO by Nudge Education — home">
+      <span class="nn-neo">NEO<span class="nn-sq" aria-hidden="true"></span></span>
+      <span class="nn-by">by Nudge Education</span>
     </a>
-    <nav class="main" aria-label="Primary">
+    <button class="nn-toggle" aria-expanded="false" aria-controls="nn-primary">Menu</button>
+    <nav class="nn-menu" id="nn-primary" aria-label="Primary">
       <a href="https://nudgeeducation.online/">Home</a>
-      <a href="https://curriculum.nudgeeducation.online/">Curriculum</a>
-      <a href="https://nudgeeducation.online/post-16.html">Post-16</a>
-      <a href="https://courses.nudgeeducation.online/" aria-current="page">Courses &amp; clubs</a>
-      <a href="./qualifications.html">Qualifications</a>
-      <a href="https://nudgeeducation.online/faq.html">FAQ</a>
-      <a class="cta" id="nav-register" href="#" target="_blank" rel="noopener">Register interest</a>
+      <div class="nn-group">
+        <button aria-expanded="false">Learning <span class="nn-caret" aria-hidden="true">▾</span></button>
+        <div class="nn-drop">
+          <a href="https://curriculum.nudgeeducation.online/">Curriculum</a>
+          <a href="https://courses.nudgeeducation.online/">Courses &amp; clubs</a>
+          <a href="https://courses.nudgeeducation.online/qualifications.html">Qualifications</a>
+          <a href="https://nudgeeducation.online/term-dates.html">Term dates</a>
+        </div>
+      </div>
+      <div class="nn-group">
+        <button aria-expanded="false">Post-16 <span class="nn-caret" aria-hidden="true">▾</span></button>
+        <div class="nn-drop">
+          <a href="https://nudgeeducation.online/post-16.html">Post-16 at NEO</a>
+          <a href="https://next.nudgeeducation.online/">NEO Next — what could come next?</a>
+        </div>
+      </div>
+      <div class="nn-group">
+        <button aria-expanded="false">For commissioners <span class="nn-caret" aria-hidden="true">▾</span></button>
+        <div class="nn-drop">
+          <a href="https://demo.nudgeeducation.online/">Open day demo</a>
+          <a href="https://policies.nudgeeducation.online/">Policies</a>
+          <a href="https://www.eventbrite.co.uk/o/nudge-education-ltd-115006744051" rel="noopener">Open events</a>
+        </div>
+      </div>
+      <div class="nn-group">
+        <button aria-expanded="false">About <span class="nn-caret" aria-hidden="true">▾</span></button>
+        <div class="nn-drop">
+          <a href="https://nudgeeducation.online/faq.html">FAQ</a>
+          <a href="https://nudgeeducation.co.uk/blog" rel="external">Blog</a>
+        </div>
+      </div>
+      <a href="https://support.nudgeeducation.online/">Help</a>
+      <a class="nn-cta" href="https://forms.gle/faBGGggUKXVyGZc7A" rel="noopener">Register</a>
     </nav>
   </div>
 </header>
+<script>
+(function(){
+  var nn=document.getElementById('nn');
+  var toggle=nn.querySelector('.nn-toggle');
+  toggle.addEventListener('click',function(){
+    var open=nn.classList.toggle('nn-open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nn.querySelectorAll('.nn-group > button').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var g=btn.parentElement,was=g.classList.contains('open');
+      nn.querySelectorAll('.nn-group.open').forEach(function(o){o.classList.remove('open');o.querySelector('button').setAttribute('aria-expanded','false');});
+      if(!was){g.classList.add('open');btn.setAttribute('aria-expanded','true');}
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!nn.contains(e.target)) nn.querySelectorAll('.nn-group.open').forEach(function(o){o.classList.remove('open');o.querySelector('button').setAttribute('aria-expanded','false');});
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') nn.querySelectorAll('.nn-group.open').forEach(function(o){o.classList.remove('open');o.querySelector('button').setAttribute('aria-expanded','false');});
+  });
+  function norm(u){
+    var a=document.createElement('a');a.href=u;
+    var p=a.pathname.replace(/\/index\.html$/,'/');
+    return a.hostname.replace(/^www\./,'')+p.replace(/\/$/,'')||a.hostname;
+  }
+  var here=norm(location.href);
+  nn.querySelectorAll('.nn-menu a').forEach(function(a){
+    if(a.classList.contains('nn-cta'))return;
+    if(norm(a.href)===here){
+      a.setAttribute('aria-current','page');
+      var g=a.closest('.nn-group');if(g)g.classList.add('nn-here');
+    }
+  });
+})();
+</script>
+<!-- neo-shared-nav:end -->
 
 <section class="hero">
   <div class="wrap">
@@ -164,25 +272,67 @@ footer small{display:block;margin-top:1rem;color:#8c97a1;font-size:.8rem}
   </div>
 </section>
 
-<footer class="site">
-  <div class="wrap">
-    <p class="lead">Come and have a look.</p>
-    <p>We'd rather show you than tell you. Register your interest in any course or club, or come to an open event.</p>
-    <div class="cols">
+<!-- neo-shared-footer:start v1 · canonical: nudge-access-website/shared/footer.html · edit the canonical, then re-stamp with shared/stamp-nav.py — do not hand-edit copies -->
+<style>
+.nf{background:#1A2E3B;color:#c9d2da;font-family:'Inter',Arial,system-ui,sans-serif;margin-top:2rem}
+.nf *{box-sizing:border-box}
+.nf-wrap{max-width:1140px;margin:0 auto;padding:2.2rem 1.25rem 1.4rem}
+.nf-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.8rem}
+.nf h4{font:600 .78rem 'Inter',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8fa0ad;margin:0 0 .7rem}
+.nf-title{font-family:'Fraunces',Georgia,serif;font-size:1.25rem;color:#fff;margin:0 0 .5rem}
+.nf p{font-size:.88rem;line-height:1.55;margin:0}
+.nf ul{list-style:none;margin:0;padding:0}
+.nf li{margin:0 0 .45rem}
+.nf a{color:#cfd6dc;text-decoration:none;font-size:.88rem}
+.nf a:hover{color:#2AB3A0;text-decoration:underline}
+.nf-legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;border-top:1px solid rgba(255,255,255,.14);margin-top:1.8rem;padding-top:1rem;font-size:.78rem;color:#8c97a1}
+.nf-legal a{font-size:.78rem;color:#8c97a1}
+</style>
+<footer class="nf">
+  <div class="nf-wrap">
+    <div class="nf-cols">
       <div>
-        <a href="https://www.eventbrite.co.uk/o/nudge-education-ltd-115006744051">Open events</a><br>
-        <a href="https://nudgeeducation.online/faq.html">FAQ</a><br>
-        <a href="https://curriculum.nudgeeducation.online/">Curriculum</a>
+        <p class="nf-title">Nudge Education Online</p>
+        <p>The online alternative provision from Nudge Education. Working towards voluntary Ofsted accreditation as an online school.</p>
       </div>
       <div>
-        <a href="https://policies.nudgeeducation.online/">All policies</a><br>
-        <a href="mailto:neo@nudgeeducation.online">neo@nudgeeducation.online</a><br>
-        <a href="https://nudgeeducation.online/">nudgeeducation.online</a>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="https://curriculum.nudgeeducation.online/">Curriculum</a></li>
+          <li><a href="https://courses.nudgeeducation.online/">Courses &amp; clubs</a></li>
+          <li><a href="https://nudgeeducation.online/post-16.html">Post-16</a></li>
+          <li><a href="https://next.nudgeeducation.online/">NEO Next</a></li>
+          <li><a href="https://nudgeeducation.online/term-dates.html">Term dates</a></li>
+          <li><a href="https://nudgeeducation.online/faq.html">FAQ</a></li>
+          <li><a href="https://nudgeeducation.co.uk/blog" rel="external">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For commissioners</h4>
+        <ul>
+          <li><a href="https://demo.nudgeeducation.online/">Open day demo</a></li>
+          <li><a href="https://policies.nudgeeducation.online/">All policies</a></li>
+          <li><a href="https://policies.nudgeeducation.online/03-service-delivery/admissions-policy" rel="noopener">Admissions</a></li>
+          <li><a href="https://policies.nudgeeducation.online/03-service-delivery/child-protection-and-safeguarding-policy" rel="noopener">Safeguarding</a></li>
+          <li><a href="https://www.eventbrite.co.uk/o/nudge-education-ltd-115006744051" rel="noopener">Open events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:neo@nudgeeducation.online">neo@nudgeeducation.online</a></li>
+          <li><a href="https://nudgeeducation.online/">nudgeeducation.online</a></li>
+          <li><a href="https://support.nudgeeducation.online/">Tech help</a></li>
+        </ul>
       </div>
     </div>
-    <small>© 2026 Nudge Education Ltd · Part of Nudge Education · Working towards voluntary Ofsted accreditation as an online school.</small>
+    <div class="nf-legal">
+      <span>© 2026 Nudge Education Ltd · Company No. 10192753 · Pursuing OEAS accreditation</span>
+      <span><a href="https://policies.nudgeeducation.online/01-all-company/privacy-policy-web-users" rel="noopener">Privacy policy</a> · <a href="https://nudgeeducation.bamboohr.com/careers" rel="external noopener">Careers</a></span>
+    </div>
   </div>
 </footer>
+<!-- neo-shared-footer:end -->
 
 <script>
 /* ----------------------------------------------------------------------
@@ -332,8 +482,6 @@ els.clear.addEventListener('click', ()=>{
   [...els.seg.children].forEach(x=>x.setAttribute('aria-pressed', x.dataset.type==='all'));
   render();
 });
-document.getElementById('nav-register').href = EOI_FORM_URL;
-
 render();
 </script>
 </body>
